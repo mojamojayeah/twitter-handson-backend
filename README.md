@@ -47,4 +47,17 @@ firebase > YOUR_FUNCTION_NAME()
 ```
 firebase > YOUR_FUNCTION_NAME({key: value})
 ```
-test
+# git 使い方
+## start
+```
+git pull > 最新に合わせる*confulictに注意  
+git checkout -b branchname  
+git branch > 何のbranch確認  
+git status > statusの確認  
+```
+## push
+```
+git add .   
+git commit -m "comments"  
+git push origin HEAD(branch名)  
+```
