@@ -47,3 +47,4 @@ firebase > YOUR_FUNCTION_NAME()
 ```
 firebase > YOUR_FUNCTION_NAME({key: value})
 ```
+test
