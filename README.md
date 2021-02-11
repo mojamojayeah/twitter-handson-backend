@@ -61,3 +61,15 @@ git add .
 git commit -m "comments"  
 git push origin HEAD(branch名)  
 ```
+## repositly
+```
+git init > .git dir 作成
+git branch -M main
+git add.
+git commit -m
+git remote add origin url
+git push -u origin main
+err用
+git config --global user.name "mojamojayeah"
+git config --global user.email mail
+git remote set-url origin https://mojamojayeah@github.com/mojamojayeah/twitter-handson-backend.git
