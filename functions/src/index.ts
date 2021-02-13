@@ -1,14 +1,14 @@
 import * as functions from 'firebase-functions'
 
 //Setting Up. firestoreへの書きこみ: 認証の初期化
-// import * as admin from 'firebase-admin'
+import * as admin from 'firebase-admin'
 
-// const serviceAccount = '../../firebase-hands-on/google-service-account.json'
+const serviceAccount = '../../twitter-handson-backend/google-service-account.json'
 
-// admin.initializeApp({
-//   credential: admin.credential.cert(serviceAccount),
-//   databaseURL: 'YOUR_DATABASE_URL' //DBのURLを書き換え
-// })
+admin.initializeApp({
+   credential: admin.credential.cert(serviceAccount),
+   databaseURL: 'https://twiiter-handson-mojamoja.firebaseio.com' //DBのURLを書き換え
+ })
 
 export const helloWorld = functions.https.onRequest((request, response) => {
   functions.logger.info('Hello logs!', { structuredData: true })
@@ -16,12 +16,14 @@ export const helloWorld = functions.https.onRequest((request, response) => {
 })
 
 //Lesson 1. firestoreへの書きこみ: firestoreへ書き込むonCall関数の定義
-// export const helloWorldOnCall = functions.https.onCall(async (data, context) => {
-// const db = admin.firestore()
-
+export const helloWorldOnCall = functions.https.onCall(async (data, context) => {
+  const db = admin.firestore()
+  db.collection('helloWorld')
+    .doc()
+    .set({hello: 'world'})
 /*TASK: ここにfirestoreへの書き込みコードを書いてみよう！*/
 
-// })
+})
 
 //Lesson 2. 引数をつけてfirestoreへの書きこみ: firestoreへ書き込むonCall関数の定義
 // export const helloWorldOnCallWithArg = functions.https.onCall(async (data, context) => {
