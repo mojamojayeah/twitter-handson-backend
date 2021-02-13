@@ -73,3 +73,10 @@ err用
 git config --global user.name "mojamojayeah"
 git config --global user.email mail
 git remote set-url origin https://mojamojayeah@github.com/mojamojayeah/twitter-handson-backend.git
+```
+
+## nodebrew
+
+```
+nodebrew use ~~~ > version 変更
+```
