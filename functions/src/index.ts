@@ -18,7 +18,7 @@ export const helloWorld = functions.https.onRequest((request, response) => {
 //Lesson 1. firestoreへの書きこみ: firestoreへ書き込むonCall関数の定義
 export const helloWorldOnCall = functions.https.onCall(async (data, context) => {
   const db = admin.firestore()
-  db.collection('helloWorld')
+  await db.collection('helloWorld')
     .doc()
     .set({hello: 'world'})
 /*TASK: ここにfirestoreへの書き込みコードを書いてみよう！*/
